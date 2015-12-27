@@ -4,14 +4,22 @@
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
     <meta charset="UTF-8">
 
+    {% assign base = '' %}
+    {% assign depth = page.url | split: '/' | size | minus: 1 %}
+    {% if    depth == 1 %}{% assign base = '.' %}
+    {% elsif depth == 2 %}{% assign base = '..' %}
+    {% elsif depth == 3 %}{% assign base = '../..' %}
+    {% elsif depth == 4 %}{% assign base = '../../..' %}{% endif %}
+
+
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="{{site.url}}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ base }}/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="{{site.url}}/css/freelancer.css" rel="stylesheet">
+    <link href="{{ base }}/css/freelancer.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="{{site.url}}/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ base }}/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
