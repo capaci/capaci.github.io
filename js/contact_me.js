@@ -12,9 +12,6 @@ $contactForm.submit(function(e) {
         },
         success: function(data) {
             $contactForm.find('.alert--loading').hide();
-            // $contactForm.append('<div class="alert alert--success">Message sent!</div>');
-
-
             $("#btnSubmit").attr("disabled", false);
             $('#success').html("<div class='alert alert-success'>");
             $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -24,7 +21,6 @@ $contactForm.submit(function(e) {
             $('#success > .alert-success')
             .append('</div>');
 
-            alert("fuuuuuck");
             //clear all fields
             $('#contactForm').trigger("reset");
         },
