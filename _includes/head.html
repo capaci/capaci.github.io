@@ -1,6 +1,8 @@
 <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-    <meta charset="UTF-8">
+
+    {% include meta.html %}
+
 
     {% assign base = '' %}
     {% assign depth = page.url | split: '/' | size | minus: 1 %}
