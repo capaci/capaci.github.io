@@ -1,0 +1,25 @@
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+    font-weight: bold;
+    outline: 0;
+    text-decoration: none;
+}
+
+section#main-header {
+    padding: 50px 0;
+}
+
+section#main-header h2.name {
+    font-size: 2em;
+}
+
+section#main-header span.skills {
+    font-size: 1em;
+}
+
+section#main-header img {
+    max-width:220px;
+}
