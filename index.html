@@ -46,76 +46,10 @@ title: My Page
     </div>
 </section>
 
-<!-- About Section -->
-<section class="success" id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>Sobre</h2>
-                <hr class="star-light">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-lg-offset-2">
-                <p>
-                    Meu nome é Rafael Capaci, e eu sou um estudante, estagiário, empresário júnior e programador, além de um amante da música e da gastronomia, de Curitiba/PR.
-                </p>
-                <p>
-                    Programar para mim, vai além de trabalho, pode ser considerado um hobby, uma diversão, um estilo de vida.
-                </p>
-                <p>
-                    Antes de entrar na universidade, nunca havia programado, mas sempre fui um aficionado por problemas envolvendo raciocínio lógico e, com o passar do tempo, programar acabou tornando-se algo natural. Gosto de resolver problemas
-                    <br>
-                </p>
-            </div>
-            <div class="col-lg-4">
-                <p>
-                    Estou cursando a graduação em Ciência da Computação pela UFPR - Universidade Federal do Paraná. O curso em si foca bastante em formar acadêmicos e, é por isso que eu tento, por conta própria a cada dia, melhorar minhas habilidades em relação ao mercado de trabalho.
-                </p>
-                <p>
-                    Atualmente trabalho como estagiário de desenvolvimento na <a href="http://www.polvo.com.br" target="_blank">Polvo Digital</a>, uma agência de comunicão de Curitiba. Além disso, também sou Assessor de Negócios e Desenvolvedor na <a href="http://www.ecomp.co" target="_blank">Ecomp</a>, a empresa júnior de informática da UFPR.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section id="contact">
-    <div class="container">
-        <div class="row">
-            <h3 class="center-align">Envie sua mensagem</h3>
-            <form  id="contact-form" class="col s12" action="http://formspree.io/rafaelcapacipereira@gmail.com" method="POST" name="sentMessage">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="first_name" name="first_name" type="text" class="validate" required="">
-                        <label for="first_name">Nome</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="last_name" name="last_name" type="text" class="validate">
-                        <label for="last_name">Telefone</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="email" name="email" type="email" class="validate" required="">
-                        <label for="email">Email</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <textarea id="message" name="message" class="materialize-textarea" required=""></textarea>
-                        <label for="message">Mensagem</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <button class="btn waves-effect waves-light right" type="submit" name="action">Submit
-                      <i class="material-icons right">send</i>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
+    {% include home/about.html %}
+
+    {% include home/contact.html %}
 
 <!-- Portfolio Modals -->
 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">

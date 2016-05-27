@@ -1,0 +1,36 @@
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <h3 class="center-align">Envie sua mensagem</h3>
+            <form  id="contact-form" class="col s12" action="http://formspree.io/rafaelcapacipereira@gmail.com" method="POST" name="sentMessage">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="first_name" name="first_name" type="text" class="validate" required="">
+                        <label for="first_name">Nome</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" name="last_name" type="text" class="validate">
+                        <label for="last_name">Telefone</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" name="email" type="email" class="validate" required="">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="message" name="message" class="materialize-textarea" required=""></textarea>
+                        <label for="message">Mensagem</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn waves-effect waves-light right" type="submit" name="action">Submit
+                      <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
