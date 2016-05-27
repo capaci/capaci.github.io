@@ -1,0 +1,21 @@
+{
+  "name": "myPage",
+  "homepage": "https://github.com/capaci/capaci.github.io",
+  "authors": [
+    "capaci <rafaelcp123@gmail.com>"
+  ],
+  "description": "Página pessoal usando jekyll",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "Materialize": "materialize#^0.97.6"
+  }
+}
