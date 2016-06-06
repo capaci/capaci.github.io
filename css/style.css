@@ -8,6 +8,10 @@ a.active {
     text-decoration: none;
 }
 
+.side-nav {
+    transform: translateX(-100%);
+}
+
 section#main-header {
     padding: 50px 0;
 }
