@@ -1,0 +1,24 @@
+---
+layout: ci320-t4
+title: "Visualizator"
+---
+
+<section id="main">
+	<h1 id="page-title">{{ page.title }}</h1>
+	<div class="container">
+
+		<article>
+			<!-- <h3 id="action">Nenhuma ação sendo executada</h3> -->
+
+			<div class="grr-filter">
+				<input type="text" name="grr" id="grr" placeholder="Buscar por GRR" type="text"/>
+				<button type="submit" class="btn" id="submit">Buscar</button>
+			</div>
+			{% include ci320/t4/grade-curricular.html %}
+			<div id="popup">
+
+			</div>
+
+		</article>
+	</div>
+</section>
