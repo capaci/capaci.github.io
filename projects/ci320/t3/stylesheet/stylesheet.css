@@ -173,6 +173,11 @@ div.banner img {
 	min-width: 50px;
 	padding: 0px 15px;
 }
+.btn:hover,
+.btn:focus {
+	color: #fff;
+	opacity: .7;
+}
 
 #form-canvas {
 	padding: 5px 0;
@@ -183,7 +188,7 @@ div.banner img {
 	border-radius: 0;
 	height: 30px;
 	line-height: 15px;
-	min-width: 300px;
+	min-width: 325px;
 }
 
 div.canvas {
