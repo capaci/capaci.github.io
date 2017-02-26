@@ -1,0 +1,44 @@
+/* ------- BREAKPOINTS - uso : @include breakpoint(mouse) { parametros: valores; } ------- */
+@mixin breakpoint( $breakpoint ) {
+	@if $breakpoint == youngling {
+		@media only screen and (min-width: em(480)) { @content; }
+	}
+
+	@else if $breakpoint == padawan {
+		@media only screen and (min-width: em(768)) { @content; }
+	}
+
+	@else if $breakpoint == cavaleiro {
+		@media only screen and (min-width: em(1024)) { @content; }
+	}
+
+	@else if $breakpoint == mestre {
+		@media only screen and (min-width: em(1280)) { @content; }
+	}
+
+	@else if $breakpoint == grande_mestre {
+		@media only screen and (min-width: em(1440)) { @content; }
+	}
+
+	@else if $breakpoint == chameleon {
+		@media print, ( -o-min-device-pixel-ratio: 5/4 ), ( -webkit-min-device-pixel-ratio: 1.25 ), ( min-resolution: 120dpi ) { @content; }
+	}
+
+	@else {
+		@media only screen and (min-width: $breakpoint) { @content; }
+	}
+}
+
+
+/* ------- CLEARFIX - uso: @include clearfix; ------- */
+@mixin clearfix {
+	*zoom: 1;
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}

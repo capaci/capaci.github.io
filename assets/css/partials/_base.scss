@@ -1,0 +1,35 @@
+/*	FONTS
+------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(https://fonts.googleapis.com/css?family=Russo+One);
+
+/*	TYPOGRAPHY
+–––––––––––––––––––––––––––*/
+body {
+	font-family: 'Raleway', Arial, sans-serif, ;
+	color: #555;
+	font-size: 100%;
+	line-height: 1.5;
+	background-color: $color2;
+	margin: 0 auto;
+    max-width: $max-width;
+}
+
+/* ------ Normalize ----- */
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+/* ------- WRAPPER - Grid ------- */
+.wrapper {
+	@include clearfix; // _helpers_mixins.scss
+	margin: 0 auto;
+	padding: 0 $gutter;
+    max-width: $wrapper-width;
+
+	@include breakpoint( mouse ) { // _helpers_mixins.scss
+		padding: 0 ( 2 * $gutter );
+	}
+}

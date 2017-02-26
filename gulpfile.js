@@ -35,7 +35,9 @@ gulp.task('jade', function () {
 		.pipe(data(function (file) {
 			return requireUncached('./_data/' + path.basename(file.path) + '.json');
 		}))
-		.pipe(jade())
+		.pipe(jade()).on('error', function(err) {
+      		console.log(err);
+		})
 		.pipe(gulp.dest(settings.publicDir));
 });
 

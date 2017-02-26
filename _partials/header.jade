@@ -1,2 +1,25 @@
-header
-	h1= welcome
+nav
+    h1= "capaci"
+    ul
+        li
+            a(href="www.google.com") home
+        li
+            a(href="www.google.com") portfolio
+        li
+            a(href="www.google.com") textos
+
+header(class="header", role="banner")
+    div(class="header__text")
+        h1(class="header__text--title")= name
+        p(class="header__text--subtitle")= welcome
+        div(class="redes-sociais")
+            ul(class="social")
+                li(class="social__item")
+                    a(href="facebook.com", class="social__item--link")
+                        i(class="fa fa-facebook social__item--link--icon fa-lg", aria-hidden="true")
+                li(class="social__item")
+                    a(href="github.com", class="social__item--link")
+                        i(class="fa fa-github social__item--link--icon fa-lg", aria-hidden="true")
+                li(class="social__item")
+                    a(href="linkedin.com", class="social__item--link")
+                        i(class="fa fa-linkedin social__item--link--icon fa-lg", aria-hidden="true")
