@@ -1,7 +1,7 @@
 {
 	"title": "Dev Capaci",
 	"name": "Rafael Capaci",
-	"welcome": "Altos rolê",
+	"welcome": "Web developer",
 	"about_title": "Sobre",
 	"about_text": "Tamo aí na luta né, 23 ano já, bem loko, umas 6 copa quase. Altos texto pa fala, altas história pa contá. Tanta coisa que eu não sei o que escrever aqui. Viiish, muitos rolê já, altos volei, violão e pá.",
 	"portfolio_title": "Portfolio",
@@ -9,5 +9,22 @@
 	"contact_title": "Contato",
 	"contact_text": "Vamo fazer um trampo junto aí se pá. Vlws",
 	"copyright": "&copy; Rafael Capaci Pereira, 2017.",
-	"link": "github.com/azemoh"
+	"link": "github.com/azemoh",
+    "social_networks": [
+        {
+            "name": "facebook",
+            "link": "http://facebook.com",
+            "title": "Deixe a sua mensagem no Facebok!"
+        },
+        {
+            "name": "github",
+            "link": "http://github.com/capaci",
+            "title": "Confira alguns projetos abertos que mantenho em meu Github"
+        },
+        {
+            "name": "linkedin",
+            "link": "http://linkedin.com",
+            "title": "Aqui você pode dar uma olhada no meu currículo."
+        }
+    ]
 }
