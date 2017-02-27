@@ -8,6 +8,12 @@
     cursor: pointer;
     transition: opacity 0.2s linear;
     z-index: 1;
+
+    @include breakpoint(knight) {
+        top: 40px;
+        right: 40px;
+    }
+
     &:hover{
         opacity: 0.85;
     }

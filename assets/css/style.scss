@@ -51,6 +51,12 @@ section {
         margin-top: 140px;
         min-height: 400px;
     }
+
+    @include breakpoint(knight) {
+        &:last-of-type {
+            padding-bottom: 40px;
+        }
+    }
 }
 
 .header {
