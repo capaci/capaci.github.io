@@ -40,13 +40,13 @@ nav {
 }
 
 section {
-    &:nth-child(even) {
+    &:nth-of-type(even) {
         background: $color1;
         min-height: 400px;
         position: relative;
     }
 
-    &:nth-child(odd) {
+    &:nth-of-type(odd) {
         margin-top: 140px;
         min-height: 400px;
     }
@@ -88,6 +88,7 @@ section {
             color: $color2;
             font-size: 44px;
             text-align: center;
+            margin: 0;
         }
     }
 }

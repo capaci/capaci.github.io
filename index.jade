@@ -7,21 +7,12 @@ block head_end
 block content
     include _partials/header
 
-    section(class="about")
-        div(class="wrapper")
-            h1(class="about__title")= about_title
-            p(class="about__text")= about_text
+    include _partials/home/about
 
-    section(class="portfolio")
-        div(class="wrapper")
-            h1(class="portfolio__title")= portfolio_title
-            p(class="portfolio__text")= portfolio_text
-        
-    section(class="contact")
-        div(class="wrapper")
-            h1(class="contact__title")= contact_title
-            p(class="contact__text")= contact_text
-        
+    include _partials/home/portfolio
+
+    include _partials/home/contact
+
     include _partials/footer
 
 block body_end
