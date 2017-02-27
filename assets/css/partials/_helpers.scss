@@ -42,3 +42,50 @@
 		clear: both;
 	}
 }
+
+@mixin font-with-line($font_hierarchy) {
+    $font_size: 14px;
+    @if ($font_hierarchy == 0) {
+        $font_size: 64px;
+    }
+
+    @else if ($font_hierarchy == 1) {
+        $font_size: 48px;
+	}
+
+    @else if ($font_hierarchy == 2) {
+        $font_size: 36px;
+	}
+
+    @else if ($font_hierarchy == 3) {
+        $font_size: 24px;
+	}
+
+    @else if ($font_hierarchy == 4) {
+        $font_size: 18px;
+	}
+
+    @else if ($font_hierarchy == 5) {
+        $font_size: 14px;
+	}
+
+    @else if ($font_hierarchy == 6) {
+        $font_size: 12px;
+	}
+
+    @else if ($font_hierarchy == 7) {
+        $font_size: 10px;
+	}
+
+    @else if ($font_hierarchy == 8) {
+        $font_size: 8px;
+	}
+
+	font-size: $font_size;
+	line-height: $font_size * 1.4;;
+}
+
+@mixin make-column($col) {
+    float: left;
+    width: $col / 12 * 100%;
+}

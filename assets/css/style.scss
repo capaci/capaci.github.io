@@ -77,8 +77,8 @@ section {
         transform: translateX(-50%);
 
         .header__text--title {
+            @include font-with-line(0);
             color: $color2;
-            font-size: 60px;
             font-family: 'Russo One', sans-serif;
             font-weight: 300;
             margin: 0;
@@ -86,8 +86,8 @@ section {
         }
 
         .header__text--subtitle {
+            @include font-with-line(2);
             color: $color2;
-            font-size: 44px;
             text-align: center;
             margin: 0;
         }
@@ -134,10 +134,12 @@ section {
 .about {
     .about__title {
         text-align: center;
+        @include font-with-line(3);
     }
 
     .about__text {
         text-align: center;
+        @include font-with-line(4);
     }
 }
 
@@ -157,11 +159,13 @@ section {
     }
 
     .portfolio__title {
+        @include font-with-line(3);
         color: $color2;
         text-align: center;
     }
 
     .portfolio__text {
+        @include font-with-line(4);
         color: $color2;
         text-align: center;
     }
