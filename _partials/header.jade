@@ -1,12 +1,16 @@
-nav
-    h1= "capaci"
-    ul
-        li
-            a(href="www.google.com") home
-        li
-            a(href="www.google.com") portfolio
-        li
-            a(href="www.google.com") textos
+div(class="open")
+    span(class="cls")
+    span
+        ul(class="sub-menu")
+            li
+                a(href="#about" title="about")= "Sobre / About"
+            li
+                a(href="#skills" title="skills")= "Habilidades / Skills"
+            li
+                a(href="#portfolio" title="jobs")= "Trabalhos / Jobs"
+            li
+                a(href="#contact" title="contact")= "Contato / Contact"
+    span(class="cls")
 
 header(class="header", role="banner")
     div(class="header__text")
