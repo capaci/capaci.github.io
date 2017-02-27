@@ -7,7 +7,8 @@ var gulp = require('gulp'),
 	jade = require('gulp-jade'),
 	prefix = require('gulp-autoprefixer'),
 	sass = require('gulp-sass'),
-	browserSync = require('browser-sync');
+	browserSync = require('browser-sync'),
+    concat = require('gulp-concat');
 
 /*
 * Change directories here
@@ -15,7 +16,9 @@ var gulp = require('gulp'),
 var settings = {
 	publicDir: '_site',
 	sassDir: 'assets/css',
-	cssDir: '_site/assets/css'
+	cssDir: '_site/assets/css',
+    jsDir: 'assets/js',
+    jsDest: '_site/assets/js'
 };
 
 /**
@@ -35,9 +38,7 @@ gulp.task('jade', function () {
 		.pipe(data(function (file) {
 			return requireUncached('./_data/' + path.basename(file.path) + '.json');
 		}))
-		.pipe(jade()).on('error', function(err) {
-      		console.log(err);
-		})
+		.pipe(jade())
 		.pipe(gulp.dest(settings.publicDir));
 });
 
@@ -51,7 +52,7 @@ gulp.task('jade-rebuild', ['jade'], function () {
 /**
  * Wait for jade and sass tasks, then launch the browser-sync Server
  */
-gulp.task('browser-sync', ['sass', 'jade'], function () {
+gulp.task('browser-sync', ['sass', 'script', 'jade'], function () {
 	browserSync({
 		server: {
 			baseDir: settings.publicDir
@@ -77,11 +78,23 @@ gulp.task('sass', function () {
 });
 
 /**
+ * Compile .scss files into public css directory With autoprefixer no
+ * need for vendor prefixes then live reload the browser.
+ */
+gulp.task('script', function () {
+	return gulp.src(settings.jsDir + '/*.js')
+		.pipe(concat('script.js'))
+		.pipe(gulp.dest(settings.jsDest))
+		.pipe(browserSync.reload({stream: true}));
+});
+
+/**
  * Watch scss files for changes & recompile
  * Watch .jade files run jade-rebuild then reload BrowserSync
  */
 gulp.task('watch', function () {
 	gulp.watch(settings.sassDir + '/**', ['sass']);
+	gulp.watch(settings.jsDir + '/**', ['script']);
 	gulp.watch(['*.jade', '**/*.jade', '**/*.json'], ['jade-rebuild']);
 });
 
