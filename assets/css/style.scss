@@ -2,6 +2,7 @@
 @import "partials/helpers";
 @import "partials/base";
 @import "partials/menu";
+@import "partials/form";
 
 nav {
     background: $color2;
@@ -116,13 +117,14 @@ section {
 
             .social__item--link--icon {
                 color: $color2;
+                transition: color 0.2s linear;
             }
         }
 
         &:hover {
             .social__item--link {
                 .social__item--link--icon {
-                    color: $color5;
+                    color: $color4;
                 }
             }
         }
@@ -167,23 +169,86 @@ section {
 
 .contact {
     .contact__title {
+        @include font-with-line(3);
         text-align: center;
     }
 
     .contact__text {
+        @include font-with-line(4);
         text-align: center;
+    }
+
+    .contact__info {
+        .contact__info--title {
+            @include font-with-line(4);
+        }
+
+        @include breakpoint(knight) {
+            @include make-column(6);
+        }
+    }
+
+    .contact__form {
+        padding: 0 20px;
+
+        .contact__form--title {
+            @include font-with-line(4);
+        }
+
+        @include breakpoint(knight) {
+            @include make-column(6);
+        }
+    }
+
+    .redes-sociais {
+        margin-top: 25px;
+        .social {
+
+            .social__item {
+                margin-right: 20px;
+                .social__item--link {
+
+                    .social__item--link--icon {
+                        color: $color6;
+                        transition: color 0.2s linear;
+                    }
+                }
+
+                &:hover {
+                    .social__item--link {
+                        .social__item--link--icon {
+                            color: $color4;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
-
 .footer {
     background: $color1;
-    height: 70px;
+    padding: 15px 0;
 
     .footer__text {
+        @include font-with-line(5);
         color: $color2;
-        line-height: 70px;
         margin: 0;
         text-align: center;
+
+        .footer__text--small {
+            @include font-with-line(7);
+            display: block;
+
+            a,
+            a:visited {
+                color: $color2;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }

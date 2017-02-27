@@ -29,7 +29,7 @@ body {
 	padding: 0 $gutter;
     max-width: $wrapper-width;
 
-	@include breakpoint( mouse ) { // _helpers_mixins.scss
+	@include breakpoint( youngling ) { // _helpers_mixins.scss
 		padding: 0 ( 2 * $gutter );
 	}
 }
